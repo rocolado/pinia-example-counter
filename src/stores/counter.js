@@ -18,8 +18,8 @@ export const useCounterStore = defineStore({
   },
 
   getters: {
-    oddOrEven() {
-      if (this.counter % 2 === 0) return "Even";
+    oddOrEven(state) {
+      if (state.counter % 2 === 0) return "Even";
       else return "Odd";
     }
   }
